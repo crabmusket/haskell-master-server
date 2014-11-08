@@ -91,5 +91,5 @@ updateAssoc key val assoc =
         Just old -> map (\(k, v) -> (k, if k == key then val else v)) assoc
 
 -- And a nicer sleep function than threadDelay.
-sleep :: Int -> IO ()
+sleep :: Float -> IO ()
 sleep s = threadDelay $ floor (s * 1e6)
