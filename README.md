@@ -1,7 +1,7 @@
 # haskell-master-server
 
 An HTTP master server for Torque 3D.
-Read [Main.hs](./Main.hs) for code.
+Read [Main.hs](./Main.hs) for code, and [this page](http://wiki.torque3d.org/coder:haskell-master-server) for a detailed explanation and tutorial.
 
 ## What?
 
