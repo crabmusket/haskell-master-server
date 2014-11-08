@@ -6,6 +6,7 @@ cp .bash_profile $HOME/.bash_profile
 echo "Installing GHC and cabal-install"
 apt-add-repository "deb http://ppa.launchpad.net/hvr/ghc/ubuntu trusty main"
 apt-get update
+apt-get install zlib1g-dev -y
 apt-get install -y --force-yes ghc-7.8.3 cabal-install-1.20
 
 # Install Heroku tools
