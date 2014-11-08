@@ -60,12 +60,12 @@ updateGame games = do
     status status200
 
 -- Meanwhile, the thread that we started to drop old games will call this action
--- once a minute. We filter for only games that were updated in the last 120
+-- once a minute. We filter for only games that were updated in the last 30
 -- seconds from now.
 dropOldGames :: GameList -> IO ()
 dropOldGames games = do
     now <- getCurrentTime
-    modify games $ filter (updatedInTheLast 120 now . snd)
+    modify games $ filter (updatedInTheLast 30 now . snd)
 
 -- Simple time diff.
 updatedInTheLast :: Int -> UTCTime -> UTCTime -> Bool
